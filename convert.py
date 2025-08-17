@@ -310,7 +310,7 @@ def main():
     # print("节点信息已保存到 nodes_only.json")
 
     # 直接替换 config.json 的 outbounds
-    replace_outbounds("config.json", nodes, "config.json")
+    replace_outbounds(os.getenv("SINGBOX_CONFIG"), nodes, os.getenv("SINGBOX_CONFIG"))
 
 if __name__ == "__main__":
     main()
